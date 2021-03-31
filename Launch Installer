@@ -1,0 +1,1 @@
+.\InstallCreatio.ps1 -AppName bndl_demo -FolderName '7.17.4.2252_SalesEnterprise_Marketing_ServiceEnterprise_Demo_PostgreSQL_ENU' -dbUser Supervisor -dbPassword Supervisor -port 9070 -redisDbNum 2 -redisPort 6380 -dbFileName 'BPMonline7174SalesEnterprise_Marketing_ServiceEnterprise.backup' -dbPort 5432

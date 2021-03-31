@@ -1,0 +1,13 @@
+
+Set SysSettings:
+ExchangeListenerServiceUri: http://k_krylov:10000/api/listeners
+BpmonlineExchangeEventsEndpointUrl: http://k_krylov:9050/0/ServiceModel/ExchangeListenerService.svc/NewEmail
+
+
+
+Make sure the ExchangeListenerService anonymous service is available at
+http://k_krylov:9050/0/ServiceModel/ExchangeListenerService.svc
+
+
+Run Diagnostic
+http://k_krylov:9050/0/ClientApp/#/IntegrationDiagnostics/ExchangeListener

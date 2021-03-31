@@ -1,0 +1,24 @@
+version: "3"
+services:
+  ExchangeListener:
+    # https://hub.docker.com/r/bpmonline/exchangelistener/tags?page=1&ordering=last_updated
+    image: bpmonline/exchangelistener:0.8.37
+    restart: unless-stopped
+    ports:
+      - "10000:80"
+    environment:
+      ExchangeListenerRedisHost: redisOfficial:6379
+      ExchangeListenerRedisDatabase: 0
+      PodName: ExchangeListener
+    depends_on:
+      - redisOfficial
+  
+  redisOfficial:
+    #image: bitnami/redis:latest
+    image: redis:latest
+    restart: unless-stopped
+    environment: {
+      ALLOW_EMPTY_PASSWORD: "yes"
+    }
+    ports:
+      - "6380:6379"
